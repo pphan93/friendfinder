@@ -47,8 +47,8 @@ function closestMatch(userInput) {
         "photo": element.photo
       }
     }
-    console.log("HAHA")
-    console.log(match)
+    //console.log("HAHA")
+    //console.log(match)
   });
 
   console.log("---------------------")
@@ -69,7 +69,7 @@ function totalDifference(userInput, friendArray) {
     return total + num;
   }
 
-  console.log(difference)
+  //console.log(difference)
 
   return difference.reduce(getSum);
 
