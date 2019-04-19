@@ -88,40 +88,6 @@
           <div class="container-fluid">
             <div id="carousel-example" class="carousel slide" data-ride="carousel">
               <div class="carousel-inner row w-100 mx-auto" role="listbox">
-                <!--
-                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 active">
-                  <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(2).jpg"
-                    class="img-fluid mx-auto d-block" alt="img1">
-                </div>
-                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-                  <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(4).jpg"
-                    class="img-fluid mx-auto d-block" alt="img2">
-                </div>
-                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-                  <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(2).jpg"
-                    class="img-fluid mx-auto d-block" alt="img1">
-                </div>
-                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-                  <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(4).jpg"
-                    class="img-fluid mx-auto d-block" alt="img2">
-                </div>
-                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-                  <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(2).jpg"
-                    class="img-fluid mx-auto d-block" alt="img1">
-                </div>
-                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-                  <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(4).jpg"
-                    class="img-fluid mx-auto d-block" alt="img2">
-                </div>
-                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-                  <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(2).jpg"
-                    class="img-fluid mx-auto d-block" alt="img1">
-                </div>
-                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-                  <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(4).jpg"
-                    class="img-fluid mx-auto d-block" alt="img2">
-                </div>
-                -->
               </div>
               <a class="carousel-control-prev" href="#carousel-example" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -179,27 +145,27 @@
 
     $.get("/api/friends", function (data) {
       console.log(data)
-      for (var i = 0 ; i < data.length; i++) {
+      for (var i = 0; i < data.length; i++) {
         var photo = data[i].photo;
         console.log(data[i])
         console.log(photo)
         if (i === 0) {
-          var div = $("<div/>",{
-            "class" : "carousel-item col-12 col-sm-6 col-md-4 col-lg-3 active"
+          var div = $("<div/>", {
+            "class": "carousel-item col-12 col-sm-6 col-md-4 col-lg-3 active"
           }).appendTo(".carousel-inner")
 
-          $("<img/>",{
+          $("<img/>", {
             src: photo,
-            "class" : "img-fluid mx-auto d-block"
+            "class": "img-fluid mx-auto d-block"
           }).appendTo(div)
         } else {
-          var div = $("<div/>",{
-            "class" : "carousel-item col-12 col-sm-6 col-md-4 col-lg-3"
+          var div = $("<div/>", {
+            "class": "carousel-item col-12 col-sm-6 col-md-4 col-lg-3"
           }).appendTo(".carousel-inner")
 
-          $("<img/>",{
+          $("<img/>", {
             src: photo,
-            "class" : "img-fluid mx-auto d-block"
+            "class": "img-fluid mx-auto d-block"
           }).appendTo(div)
         }
       }
@@ -223,15 +189,12 @@ Carousel
           // append slides to end
           if (e.direction == "left") {
             $('.carousel-item').eq(i).appendTo('.carousel-inner');
-          }
-          else {
+          } else {
             $('.carousel-item').eq(0).appendTo('.carousel-inner');
           }
         }
       }
     });
-
-
   </script>
 </body>
 

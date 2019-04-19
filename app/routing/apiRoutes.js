@@ -1,8 +1,5 @@
 var friends = require("../data/friends");
 
-//console.log(friends)
-
-
 module.exports = function (app) {
 
   app.get("/api/friends", function (req, res) {
@@ -15,7 +12,7 @@ module.exports = function (app) {
     var data = req.body;
     console.log(data);
     res.json(closestMatch(data.scores))
-    friends.push(data)
+    //friends.push(data)
   });
 
   app.post("/api/clear", function (req, res) {
@@ -47,8 +44,6 @@ function closestMatch(userInput) {
         "photo": element.photo
       }
     }
-    //console.log("HAHA")
-    //console.log(match)
   });
 
   console.log("---------------------")
@@ -57,10 +52,7 @@ function closestMatch(userInput) {
 
 function totalDifference(userInput, friendArray) {
   var difference = []
-  //console.log(userInput)
   for (var i = 0; i < userInput.length; i++) {
-    //console.log("_____")
-    //console.log(Math.abs(userInput[i] - friendArray[i]))
     difference.push(Math.abs(userInput[i] - friendArray[i]));
   }
 
@@ -68,8 +60,6 @@ function totalDifference(userInput, friendArray) {
   function getSum(total, num) {
     return total + num;
   }
-
-  //console.log(difference)
 
   return difference.reduce(getSum);
 
